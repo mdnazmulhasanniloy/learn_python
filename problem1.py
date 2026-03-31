@@ -4,18 +4,20 @@
 # Output
 # Output a single integer, the summation of the last digits of N and M.
 
+try:
+    Numbers = input("Enter two numbers N and M separated by space: ")
+    N, M = map(int, Numbers.split())
 
-N = int(input("Enter the first number N: ")) 
-M = int(input("Enter the second number M: "))
+    # Calculate the last digits of N and M (when we divide by 10, the remainder is the last digit)
 
-# Calculate the last digits of N and M (when we divide by 10, the remainder is the last digit)
+    last_digit_N = N % 10
+    last_digit_M = M % 10
 
-last_digit_N = N % 10
-last_digit_M = M % 10
+    # Calculate the sum of the last digits
 
-# Calculate the sum of the last digits
+    result = last_digit_N + last_digit_M
 
-result = last_digit_N + last_digit_M
-
-# Output the result
-print("The summation of the last digits of N and M is:", result)
+    # Output the result
+    print("The summation of the last digits of N and M is:", result)
+except ValueError:
+    print("Invalid input. Please enter two integers separated by space.")
