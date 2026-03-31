@@ -18,6 +18,6 @@ try:
     result = last_digit_N + last_digit_M
 
     # Output the result
-    print("The summation of the last digits of N and M is:", result)
+    print(result)
 except ValueError:
     print("Invalid input. Please enter two integers separated by space.")
