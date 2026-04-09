@@ -1,0 +1,80 @@
+
+# Function in Python
+def my_function():
+    print("Hello, World!")
+
+my_function()
+
+# function with parameters
+def add_numbers(a, b):
+    return a + b
+
+
+# a = input("Enter first number: ")
+# b = input("Enter second number: ")
+
+# result = add_numbers(int(a), int(b))
+# print(result)
+
+
+# default parameter
+def greet(name="Noman"):
+    print(f"Hello, {name}!")
+
+
+greet()
+greet("Alice")
+
+
+# docstring
+def adder(a, b):
+    """
+    Add two numbers and return the result.
+    Parameters:
+    a (int): The first number.
+    b (int): The second number.
+    Returns:    int: The sum of a and b.
+    """
+    return a + b
+
+
+help(adder)
+print(adder(5, 10))
+
+
+# variable-length arguments
+def  func(*args):
+    for arg in args:
+        print(arg)
+
+func(1, 25, 3, 4, 5)
+
+
+
+# keyword arguments
+def person_info(name, age):
+    print(f"Name: {name}, Age: {age}")  
+
+person_info(age=30, name="Alice")
+
+
+#unzip
+def unzip(*args):
+    return zip(*args)
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+print(list(unzip(list1, list2)))
+
+def factorial():
+    return 50, 60
+
+x, y = factorial()
+print(x)
+print(y)
+
+
+
+# lambda function
+square = lambda x: x ** 2
+help(square)
+print(square(5))
